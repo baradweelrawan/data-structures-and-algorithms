@@ -8,13 +8,15 @@ Write a function named `addOne` that takes an array of numbers, and returns a ne
 Use `forEach` to loop over the input array and work with each value.  Push the new value into a local array. Return the local array;
 ------------------------------------------------------------------------------------------------ */
 
+// Solution code here...
+
 const addOne = (arr) => {
   // Solution code here...
-  let newArray=[]
-  addOne.forEach(addunm => {
-    newArray.push(addunm++)
+  let newArray = []
+  arr.forEach(number => {
+    newArray.push(number + 1)
   });
-  
+  return newArray;
 };
 console.log(newArray)
 
@@ -28,10 +30,11 @@ Use `forEach` to loop over the input array. Modify each string, and add the upda
 
 const addExclamation = (arr) => {
   // Solution code here...
-  let newArray=[]
-  addExclamation.forEach(exclamation => {
-    newArray.push(`${addExclamation}` + '!')
+  let newArray = []
+  arr.forEach(i => {
+    newArray.push(i + '!')
   });
+  return newArray;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -44,10 +47,11 @@ Use `forEach` to loop over the input array. The modified strings should each be 
 
 const allUpperCase = (arr) => {
   // Solution code here...
-  let newArray=[]
-    allUpperCase.forEach(upperCase => {
-      newArray.push.toUpperCase()
-    });
+  let newArray = []
+  arr.forEach(i => {
+    newArray.push(i.toUpperCase())
+  });
+  return newArray;
 };
 console.log(newArray)
 
@@ -64,11 +68,21 @@ Use `forEach` to build a new array of strings, each string modified by the callb
 
 const greeting = (word) => {
   // Solution code here...
+  let words = []
+  word.forEach(i => {
+    words.push(i.toUpperCase() + '!');
+  })
+  return words;
 };
-
 const speaker = (words, callback) => {
   // Solution code here...
+  let newArray = [];
+  words.forEach(callback => {
+    newArray.push(callback.toUpperCase() + '!');
+  })
+  return newArray;
 };
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
@@ -88,10 +102,18 @@ Return the modified array.
 
 const addValues = (arr, value) => {
   // Solution code here...
+  arr.forEach(i => {
+    arr.push(value);
+  })
 };
 
 const addNumbers = (num, arr, times, callback) => {
   // Solution code here...
+ let newArray=[];
+ arr.forEach(callback => {
+  newArray.push(callback.arr +1);
+})
+return newArray;
 };
 
 /* ------------------------------------------------------------------------------------------------
