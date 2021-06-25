@@ -8,10 +8,13 @@ Write a function called addTwo that takes in an array and adds two to every valu
 
 const addTwo = (arr) => {
   // Solution code here...
-  const myArray=arr.filter(number => {
-    return number+2;
-  })
+  let newArray =[];
+  for (let i = 0; i < arr.length; i++) {
+    newArray.push(arr[i]+2);
+  }
+  return newArray;
 };
+  
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
@@ -23,11 +26,14 @@ For example, typeNum([1, 'bob' ,3]) returns [1,3].
 
 const typeNum = (arr) => {
   // Solution code here...
-  const myArray=arr.filter(number => {
-    return myArray;
+  let numbers =arr.filter (number =>{
+    
+    return (number == parseInt(number));
+    
   })
+  return numbers;
 };
-console.log(myArray)
+
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
 
@@ -38,12 +44,11 @@ For example, containsAnd(['panda', 'ran', 'and']) returns ['panda', 'and'].
 
 const containsAnd = (arr) => {
   // Solution code here...
-   const myArray=arr.filter(string => {
-    if(arr.includes('and')){
-    return myArray;
-   } })
+  let strings = arr.filter((stringData) => {
+    return (stringData === "and");
+  });
+  return strings;
 };
-console.log(myArray)
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
@@ -55,12 +60,11 @@ For example, oddValues([1,2,3]) returns [1,3].
 
 const oddValues = (arr) => {
   // Solution code here...
-  const oddArray=arr.filter(number => {
-    if(anumber %2===0){
-    return myArray;
-   } })
+  let oddNumbers = arr.filter(odds =>{
+    return odds % 2 !== 0;
+  })
+  return oddNumbers;
 };
-console.log(addArray)
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
@@ -72,10 +76,11 @@ For example, notInFirstArray([1,2,3], [1,2,3,4]) returns [4].
 
 const notInFirstArray = (forbiddenValues, arr) => {
   // Solution code here...
-  const res = forbiddenValues.filter(number => !arr.includes(number))
-}
+  let Arr = arr.filter(number =>{
+    return number;
+  })
+  return Arr;
 };
-console.log(res)
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6 - Stretch Goal
