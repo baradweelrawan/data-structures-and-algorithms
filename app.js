@@ -33,13 +33,36 @@ const materials = [
 //  }
   
 
- var obj = {
-    i: 10,
-    b: () => console.log(this.i, this),
-    c: function() {
-      console.log(this.i, this);
+//  var obj = {
+//     i: 10,
+//     b: () => console.log(this.i, this),
+//     c: function() {
+//       console.log(this.i, this);
+//     }
+//   }
+  
+//   obj.b(); 
+//   obj.c(); 
+
+const Animal = function(name, legs) {
+    this.name = name;
+    this.legs = legs;
+    this.eat = function() {
+      this.isEating = true;
     }
   }
+  Animal.prototype.walk = function() {
+    this.isWalking = true;
+  }
   
-  obj.b(); 
-  obj.c(); 
+  const Dog = function(name, legs) {
+    Animal.call(this, name, legs);
+  }
+  Dog.prototype = Object.create(Animal.prototype);
+  
+  let puppy = new Dog('blake', 4);
+  puppy.walk();
+  puppy.eat();
+  console.log(puppy);
+  console.log(puppy instanceof Animal);
+  console.log(puppy instanceof Dog);
