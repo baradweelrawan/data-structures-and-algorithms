@@ -20,7 +20,7 @@ const toLastNames = people => {
         
       ];
       let arr = people.reduce( (accum, person,idx) => {
-            accum[person.name] = person.role;
+            accum[person.name] = arr.role;
             return accum;
           }, {} );
 };
@@ -54,10 +54,14 @@ Write a function named addPurchases that, given an array of objects as input, us
   purchasePrice: 399
 }
 
+
 ------------------------------------------------------------------------------------------------ */
 
 const addPurchases = (arr) => {
   // Solution code here...
+  const arr = [1, 2, 3, 4, 5, 6, 7];
+  let total = arr.reduce(arr, total)
+  return total;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -70,6 +74,13 @@ Note: You may not use the array's built-in length property.
 
 const countNumberOfElements = (arr) => {
   // Solution code here...
+  const arr = [1, 2, 3, 4, 5, 6, 7];
+  let count=0;
+  for (let i = 0; i < arr.length; i++) {
+    let num = arr[i];
+    count[num]=arr.reduce(arr, num);
+    return count[num];
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -130,6 +141,11 @@ let starWarsData = [{
 
 const returnNames = (arr) => {
   // Solution code here...
+  let arr=starWarsData.reduce(arr,starWarsData){
+    // arr.push(starWarsData.name);
+
+  }
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -142,6 +158,9 @@ Note: You must use reduce for this challenge. You may not use the built-in .reve
 
 const reversedString = (str) => {
   // Solution code here...
+  let arr=str.split('');
+  let str=['a','b','c','d','f'];
+  return arr.reduce((arr, str) => str+arr, "").split("");
 };
 
 /* ------------------------------------------------------------------------------------------------
