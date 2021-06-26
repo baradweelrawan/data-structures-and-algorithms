@@ -57,8 +57,9 @@ HINT: Beware... JS default is "Lexical" ordering.
 const sortNumbers = (arr) => {
   // Solution code here...
   arr.sort();
+  return arr
 };
-console.log(arr)
+
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
 
@@ -114,6 +115,9 @@ Here is an example of the input:
 
 const sortByPrice = (arr) => {
   // Solution code here...
+  
+    let result=arr.sort((a, b) => parseFloat(a.price) - parseFloat(b.price));
+    return result;
 };
 
 /* ------------------------------------------------------------------------------------------------
