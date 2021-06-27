@@ -58,6 +58,8 @@ const sortNumbers = (arr) => {
   // Solution code here...
   arr.sort();
   return arr
+  console.log(arr)
+
 };
 
 /* ------------------------------------------------------------------------------------------------
