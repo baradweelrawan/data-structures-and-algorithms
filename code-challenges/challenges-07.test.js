@@ -34,8 +34,14 @@ const sortStarWarsCharacters = (starWarsArr) => {
   return starWarsArr.sort((a,b)=>{
     return b.height - a.height;
   })
-}
+  const descendingSort=(a,b)=>{
+    return a-b
+  }
+  return starWarsArr.sort(descendingSort);
+  
 
+}
+// console.log(starWarsArr)
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
 
@@ -47,6 +53,8 @@ const removeThree = (idx, arr) => {
    arr.splice(idx,3)
    return arr
   
+  return arr.slice(idx,4)
+ 
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -59,6 +67,7 @@ const joinArray = (arr) => {
   // Solution code here...
   
   return arr.join(' ');
+  return arr.join('');
 
 };
 
@@ -86,6 +95,13 @@ const howMuchPencil = (str) => {
   
   }
   return result[i];
+  // let resultstr = str.slice()
+  for (let i = 0; i < str.length; i++) {
+    // combinedArrays.splice(0, 0, result[i])
+    result.push(str.slice(i))
+  
+  }
+  return result;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -99,6 +115,7 @@ For example, wordsToCharList('gregor') returns ['g','r','e','g','o','r'].
 const wordsToCharList = (arr) => {
   // Solution code here...
  
+  // let newArray=[];
   return arr.split('');
   
 };
@@ -146,7 +163,7 @@ const gruffaloCrumble = {
 
 
 const listFoods = (recipe) => {
-  let result = [];
+  let result1 = [];
   // Solution code here...
   recipe.ingredients.forEach(item => {
     let item1 = item.slice(item.indexOf(' ')+1);
@@ -155,6 +172,9 @@ const listFoods = (recipe) => {
   });
   return result;
   
+  result1.push(recipe);
+  result1.slice(2,-1)
+  return result1;
 };
 
 /* ------------------------------------------------------------------------------------------------
