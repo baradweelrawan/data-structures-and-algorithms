@@ -34,10 +34,10 @@ Write a function named addValues that, given an array of numbers as input, uses 
 
 const addValues = (arr) => {
   // Solution code here...
-  const arr = [1, 2, 3, 4,5,6,7];
+  const arr1 = [1, 2, 3, 4,5,6,7];
   const reducer = (accumulator, currentValue) => accumulator + currentValue;
-  console.log(arr.reduce(reducer));
-  console.log(array1.reduce(reducer,8));
+  console.log(arr1.reduce(reducer));
+  // console.log(array1.reduce(reducer,8));
 
 
 
