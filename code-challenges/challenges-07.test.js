@@ -30,10 +30,6 @@ const sortStarWarsCharacters = (starWarsArr) => {
   return starWarsArr.sort((a,b)=>{
     return b.height - a.height;
   })
-  const descendingSort=(a,b)=>{
-    return a-b
-  }
-  return starWarsArr.sort(descendingSort);
   
 
 }
@@ -49,8 +45,7 @@ const removeThree = (idx, arr) => {
    arr.splice(idx,3)
    return arr
   
-  return arr.slice(idx,4)
- 
+   
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -63,8 +58,7 @@ const joinArray = (arr) => {
   // Solution code here...
   
   return arr.join(' ');
-  return arr.join('');
-
+  
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -90,14 +84,8 @@ const howMuchPencil = (str) => {
     result[i]= combinedArrays[i]
   
   }
-  return result[i];
-  // let resultstr = str.slice()
-  for (let i = 0; i < str.length; i++) {
-    // combinedArrays.splice(0, 0, result[i])
-    result.push(str.slice(i))
-  
-  }
   return result;
+ 
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -168,9 +156,7 @@ const listFoods = (recipe) => {
   });
   return result;
   
-  result1.push(recipe);
-  result1.slice(2,-1)
-  return result1;
+  
 };
 
 /* ------------------------------------------------------------------------------------------------
