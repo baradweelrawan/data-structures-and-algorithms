@@ -29,11 +29,11 @@ const sortStarWarsCharacters = (starWarsArr) => {
   const descendingSort=(a,b)=>{
     return a-b
   }
-  starWarsArr.sort(descendingSort);
-  console.log(starWarsArr)
+  return starWarsArr.sort(descendingSort);
+  
 
 }
-
+// console.log(starWarsArr)
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
 
@@ -42,8 +42,8 @@ Write a function named removeThree that takes an index and an array. The functio
 
 const removeThree = (idx, arr) => {
   // Solution code here...
-  arr.splice(idx)
-  console.log(arr)
+  return arr.slice(idx,4)
+ 
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -55,7 +55,7 @@ Write a function named joinArray that takes an array and joins all of the elemen
 const joinArray = (arr) => {
   // Solution code here...
   
-  console.log(arr.join());
+  return arr.join('');
 
 };
 
@@ -75,11 +75,13 @@ For example, if the input is 'Welcome', the output will be:
 const howMuchPencil = (str) => {
   let result = [];
   // Solution code here...
-  let result = str.slice()
+  // let resultstr = str.slice()
   for (let i = 0; i < str.length; i++) {
-    combinedArrays.splice(0, 0, result[i])
-  return result;
+    // combinedArrays.splice(0, 0, result[i])
+    result.push(str.slice(i))
+  
   }
+  return result;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -92,7 +94,8 @@ For example, wordsToCharList('gregor') returns ['g','r','e','g','o','r'].
 
 const wordsToCharList = (arr) => {
   // Solution code here...
-  let newArray=[];
+  // let newArray=[];
+  return arr.split('');
   
 };
 
@@ -139,9 +142,11 @@ const gruffaloCrumble = {
 
 
 const listFoods = (recipe) => {
-  let result = [];
+  let result1 = [];
   // Solution code here...
-  return result;
+  result1.push(recipe);
+  result1.slice(2,-1)
+  return result1;
 };
 
 /* ------------------------------------------------------------------------------------------------
