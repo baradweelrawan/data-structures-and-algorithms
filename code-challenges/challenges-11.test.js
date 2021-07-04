@@ -20,7 +20,10 @@ Becomes:
 
 function transformToLis(obj){
   // Solution code here...
- return (Object.keys(obj))
+  let array = Object.keys(obj).map((key) => {
+    return (`<li>${(key)}: ${obj[key]}</li>`);
+  });
+  return array;
 }
 
 /* ------------------------------------------------------------------------------------------------
@@ -35,11 +38,12 @@ For example, count(5, [[1, 3, 5, 7, 9], [5, 5, 5], [1, 2, 3]]) returns 4.
 
 const count = (target, input) => {
   // Solution code here...
-   
-   return(count.push(count.reduce(()=> (target, input))) )
-    
-  
-  
+  // let countInt = 0;
+  input.map(target=>{
+        return target++;
+    }).forEach(countInt=>{
+        console.log(countInt)
+    })
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -54,6 +58,11 @@ For example, [[1, 2, 3, 4, 5], [6, 7, 2, 4, 5, 7], [9, 2, 3, 6,]] returns 66.
 
 const totalSum = (input) => {
   // Solution code here...
+  input.map(item=>{
+        return item+item[0]
+    }).map(item=>{
+      return item
+    })
 };
 
 /* ------------------------------------------------------------------------------------------------
