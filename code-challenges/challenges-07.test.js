@@ -34,13 +34,14 @@ const sortStarWarsCharacters = (starWarsArr) => {
   return starWarsArr.sort((a,b)=>{
     return b.height - a.height;
   })
-  const descendingSort=(a,b)=>{
-    return a-b
-  }
-  return starWarsArr.sort(descendingSort);
+}
+  // const descendingSort=(a,b)=>{
+  //   return a-b
+  // }
+  // return starWarsArr.sort(descendingSort);
   
 
-}
+
 // console.log(starWarsArr)
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
@@ -53,7 +54,7 @@ const removeThree = (idx, arr) => {
    arr.splice(idx,3)
    return arr
   
-  return arr.slice(idx,4)
+  // return arr.slice(idx,4)
  
 };
 
@@ -67,7 +68,7 @@ const joinArray = (arr) => {
   // Solution code here...
   
   return arr.join(' ');
-  return arr.join('');
+  // return arr.join('');
 
 };
 
@@ -96,12 +97,7 @@ const howMuchPencil = (str) => {
   }
   return result[i];
   // let resultstr = str.slice()
-  for (let i = 0; i < str.length; i++) {
-    // combinedArrays.splice(0, 0, result[i])
-    result.push(str.slice(i))
-  
-  }
-  return result;
+  // 
 };
 
 /* ------------------------------------------------------------------------------------------------
