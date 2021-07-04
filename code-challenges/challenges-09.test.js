@@ -10,10 +10,16 @@ E.g. [4,2,7,5,9,2] -> 9
 ------------------------------------------------------------------------------------------------ */
 const maxInArray = (arr) => {
   // Solution code here...
-  let accumulator = ((a, b) => Math.max(a, b));
-  //  [a,b].reduce(accumulator, arr);
-  arr.reduce(accumulator, value(a, b))
-  return arr;
+  // let accumulator = ((a, b) => Math.max(a, b));
+  // //  [a,b].reduce(accumulator, arr);
+  // arr.reduce(accumulator, value(a, b))
+  // return arr;
+  return arr.reduce((accumulator,value)=>{
+    if (value>accumulator) {
+      accumulator = value
+    }
+    return accumulator;
+   }, '')
 
 
 };
@@ -35,11 +41,12 @@ const getCourseKeys = (obj) => {
   // Solution code here...
   // for( let i in  courseInfo ) {
   //      console.log(i);
-  let properties = Object.keys(obj);
-  properties.forEach(property => {
-  property, obj[property];
-  });
-return properties;
+//   let properties = Object.keys(obj);
+//   properties.forEach(property => {
+//   property, obj[property];
+//   });
+// return properties;
+return Object.keys(obj);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -52,9 +59,12 @@ Write a function named checkValues that takes in an object and a value and retur
 
 const checkValues = (obj, value) => {
   // Solution code here...
-  Object.values(obj).forEach(value => {
-    return value;
-  })
+  
+  if (Object.values(obj).includes(value)){
+    return true;
+  }else{
+    return false;
+  }
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -78,9 +88,9 @@ HR has asked you to change the data to make it easier to print so that it looks 
 
 const updateNumbers = (obj) => {
   // Solution code here...
-  Object.values(updateNumbers).forEach(value => {
-    return value;
-  })
+  for (let i in obj){
+    return `${i}: ${obj[i]}`;
+  }
 };
 
 
@@ -135,14 +145,14 @@ const characters = [
 ];
 
 const getHouses = (arr) => {
-  let houses = [];
+  
   // Solution code here...
-  Object.entries(getHouses).forEach(arr => {
-
-    return houses;
-
+  let houses = Object.keys(characters);
+  let array=[];
+  arr.map(element =>{
+    array.push (element.house)
   })
- 
+  return array;
 };
 
 /*------------------------------------------------------------------------------------------------
@@ -159,12 +169,18 @@ hasChildrenValues(characters, 'Sansa') will return false
 
 const hasChildrenValues = (arr, character) => {
   // Solution code here...
-  // Object.values(hasChildrenValues).forEach(character => {
-  //   for (let i in arr) {
-  //     return character;
-  //   });
-
-  //   };
+  let result;
+  arr.map(element =>{
+    if (Object.values(element).includes(character)){
+         if (element.children) {       
+           result=true;
+         }
+       else{
+          result=false;
+       }
+     }})
+     return result;
+    };
 
     /* ------------------------------------------------------------------------------------------------
     CHALLENGE 7 - Stretch Goal
