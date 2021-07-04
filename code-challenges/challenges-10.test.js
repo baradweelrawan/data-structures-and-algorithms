@@ -11,7 +11,7 @@ function returnTen(str){
   // Solution code here...
 //   let arr= [];
 //   return arr === str.split('',10).reverse().splice(1,10); 
-// }
+}
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
@@ -55,16 +55,16 @@ return: 35
 ------------------------------------------------------------------------------------------------ */
 const totalSum = (matrix) => {
   // Solution code here...
-  let totalSum=0;
-  for(let k=0; k<matrix.length-1; k++ ){
-    for( let j = 0; j <= matrix.length - 1; j++ ) {
-      if(matrix[k] !== matrix[j]){
-        totalSum=matrix[k]+matrix[j];
-        return totalSum[j];
-      }
+  // let totalSum=0;
+  // for(let k=0; k<matrix.length-1; k++ ){
+  //   for( let j = 0; j <= matrix.length - 1; j++ ) {
+  //     if(matrix[k] !== matrix[j]){
+  //       totalSum=matrix[k]+matrix[j];
+  //       return totalSum[j];
+  //     }
 
-      console.log('totalSum=',totalSum[k])
-  }
+  //     console.log('totalSum=',totalSum[k])
+  // }
 
 };
 
