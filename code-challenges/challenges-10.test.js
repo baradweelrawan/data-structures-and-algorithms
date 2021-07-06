@@ -37,7 +37,6 @@ const findMax = (matrix) => {
     for (let j = 0; j < matrix[i].length; j++) {
       if (matrix[i][j] > arr) {
         arr = matrix[i][j];
-
       }
     }
   }
@@ -65,11 +64,7 @@ const totalSum = (matrix) => {
     for (let j = 0; j < matrix[i].length; j++) {
 
       totalSum += matrix[i][j];
-
-
-
     }
-
   }
   return totalSum;
 
@@ -100,7 +95,7 @@ const cookieStores = [firstPike, seaTac, seattleCenter, capHill, alkiBeach];
 
 const grandTotal = (stores) => {
   // Solution code here...
-  let arr = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+  let arr = [0, 1, 2, 3, 4, 5, 6,7, 8, 9, 10,11];
   for (let i = 0; i < stores.length; i++) {
     for (let j = 0; j < hoursOpen.length; j++) {
 
@@ -127,9 +122,9 @@ Write a function named salesData that uses forEach to iterate over the hourlySal
 const salesData = (hours, data) => {
   // Solution code here...
   let arr = [];
-  hours.forEach((item, index) => {
+  hours.forEach((item, i) => {
     arr.push({
-      sales: `${data[index]} cookies`,
+      sales: `${data[i]} cookies`,
       time: `${item}`
     });
   });
