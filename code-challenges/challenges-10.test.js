@@ -11,6 +11,9 @@ function returnTen(str){
   // Solution code here...
 //   let arr= [];
 //   return arr === str.split('',10).reverse().splice(1,10); 
+let arr = str.split('');
+arr.splice(0, arr.length - 10);
+return arr;
 }
 
 /* ------------------------------------------------------------------------------------------------
@@ -29,14 +32,16 @@ return: 23
 ------------------------------------------------------------------------------------------------ */
 const findMax = (matrix) => {
   // Solution code here...
-  let maxNum = matrix[0] || null;
-  let number = null;
-  for(let i = 1; i <= matrix.length; i++) {
-    number = matrix[i];
-    maxNum = Math.max(maxNum, number);
-    return maxNum;
+  let arr = 0;
+  for (let i = 0; i < matrix.length; i++) {
+    for (let j = 0; j < matrix[i].length; j++) {
+      if (matrix[i][j] > arr) {
+        arr = matrix[i][j];
+
+      }
+    }
   }
-  console.log(maxNum)
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -55,16 +60,18 @@ return: 35
 ------------------------------------------------------------------------------------------------ */
 const totalSum = (matrix) => {
   // Solution code here...
-  // let totalSum=0;
-  // for(let k=0; k<matrix.length-1; k++ ){
-  //   for( let j = 0; j <= matrix.length - 1; j++ ) {
-  //     if(matrix[k] !== matrix[j]){
-  //       totalSum=matrix[k]+matrix[j];
-  //       return totalSum[j];
-  //     }
+  let totalSum = 0;
+  for (let i = 0; i < matrix.length; i++) {
+    for (let j = 0; j < matrix[i].length; j++) {
 
-  //     console.log('totalSum=',totalSum[k])
-  // }
+      totalSum += matrix[i][j];
+
+
+
+    }
+
+  }
+  return totalSum;
 
 };
 
@@ -93,6 +100,17 @@ const cookieStores = [firstPike, seaTac, seattleCenter, capHill, alkiBeach];
 
 const grandTotal = (stores) => {
   // Solution code here...
+  let arr = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+  for (let i = 0; i < stores.length; i++) {
+    for (let j = 0; j < hoursOpen.length; j++) {
+
+      // newArr.push(stores[i][j]);
+      arr[j] += stores[i][j];
+
+    }
+
+  }
+  return arr;
 
 };
 
@@ -108,6 +126,14 @@ Write a function named salesData that uses forEach to iterate over the hourlySal
 
 const salesData = (hours, data) => {
   // Solution code here...
+  let arr = [];
+  hours.forEach((item, index) => {
+    arr.push({
+      sales: `${data[index]} cookies`,
+      time: `${item}`
+    });
+  });
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -133,6 +159,19 @@ const errands = [
 
 const howManyTreats = (arr) => {
   // Solution code here...
+  let quantity = 0;
+  arr.forEach((item, index) => {
+
+    item.items.map((value, idx) => {
+      if (value.name=='Treats') {
+
+        quantity = value.quantity;
+      }
+
+    });
+
+  });
+  return quantity;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -155,6 +194,7 @@ The top row of the board is considered row zero and row numbers increase as they
 
 const battleship = (board, row, col) => {
   //  Solution code here...
+
 };
 
 /* ------------------------------------------------------------------------------------------------
