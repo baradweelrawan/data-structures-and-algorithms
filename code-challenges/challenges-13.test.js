@@ -8,10 +8,13 @@ Write a function named longestString that takes in an array of strings and retur
 
 const longestString = (arr) => {
 // Solution code here...
-{
-  arr.charCodeAt(0); 
-  return(arr)
-}
+let max= ''
+    arr.map(item =>{
+      if (item.length > max.length ) {
+        max=item
+      }
+    })
+    return arr.indexOf(max)
 };
   
 /* ------------------------------------------------------------------------------------------------
@@ -24,11 +27,10 @@ For example, ['this is great :)', 'wow', 'whyyyyyy :(', ':)))))'] returns ['t', 
 
 const firstLetters = (arr) => {
   // Solution code here...
-  let first = arr.map(item =>{
-    item.charAt(0);
-    return(arr)
+  let firstLetters = arr.map(letter => letter[0]);
+  return firstLetters
 
-  } 
+  
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -41,6 +43,8 @@ For example, ['this is great :)', 'wow', 'whyyyyyy :(', ':)))))'] returns ['this
 
 const findHappiness = (arr) => {
   // Solution code here...
+  let newArray = arr.filter( item => item.includes(':)'))
+  return newArray
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -53,6 +57,11 @@ For example, (123) 456-7890 returns 1234567890
 
 const standardizePhoneNumbers = (arr) => {
   // Solution code here...
+  let newArray = []
+  arr.forEach(item => {
+    newArray.push (item.replace(/[\s\-()]/g,''))
+  });
+  return newArray
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -65,6 +74,11 @@ For example, 'abcdefg' returns 'bdf'
 
 const onlyOddChars = (str) => {
   // Solution code here...
+  let oddIndex= [];
+  for (let i = 0; i < str.length; i++) {
+    i % 2 === 0 ? false : oddIndex.push(str[i])
+  }
+  return oddIndex.join('');
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -75,6 +89,11 @@ Write a function named allHappy that takes in an array of strings and returns a 
 
 const allHappy = (arr) => {
   // Solution code here...
+  if (findHappiness(arr).length === arr.length) {
+    return true
+  }else{
+    return false
+  }
 };
 
 /* ------------------------------------------------------------------------------------------------
