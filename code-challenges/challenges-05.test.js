@@ -13,18 +13,10 @@ You can assume that neither firstName nor lastName will be blank
 ------------------------------------------------------------------------------------------------ */
 const toLastNames = people => {
   // Solution code here...
-  let person = [
-        {firstName:'Jane', role:'Doe'},
-        {firstName:'James', role:'Bond'},
-        {firstName:'ane Doe', role:'James Bond'},
-        
-      ];
-      let arr = person.reduce( (accum, person,idx) => {
-            accum[person.name] = arr.role;
-            return accum;
-          }, {} );
-};
-
+  return people.map (names =>{
+    return names.firstName +' '+ names.lastName;
+  })
+    };
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
 
@@ -34,11 +26,9 @@ Write a function named addValues that, given an array of numbers as input, uses 
 
 const addValues = (arr) => {
   // Solution code here...
-  const arr1 = [1, 2, 3, 4,5,6,7];
-  const reducer = (accumulator, currentValue) => accumulator + currentValue;
-  console.log(arr1.reduce(reducer));
-  // console.log(array1.reduce(reducer,8));
-
+  return arr.reduce((accumlator,value) =>{
+    return accumlator+value;
+  },0);
 
 
 
@@ -59,9 +49,9 @@ Write a function named addPurchases that, given an array of objects as input, us
 
 const addPurchases = (arr) => {
   // Solution code here...
-  const arr1 = [1, 2, 3, 4, 5, 6, 7];
-  let total = arr.reduce(arr1, total)
-  return total;
+  return arr.reduce((accumlator,value) =>{
+    return accumlator+value.purchasePrice;
+  },0);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -74,12 +64,9 @@ Note: You may not use the array's built-in length property.
 
 const countNumberOfElements = (arr) => {
   // Solution code here...
-  const arr1 = [1, 2, 3, 4, 5, 6, 7];
-  let count=0;
-  for (let i = 0; i < arr.length; i++) {
-    let num = arr1[i];
-    count[num]=arr.reduce(arr1, num);
-    return count[num];
+  return arr.reduce((accumlator,value) =>{
+    return accumlator=arr.length;
+  },0)
 
 };
 
@@ -141,11 +128,12 @@ let starWarsData = [{
 
 const returnNames = (arr) => {
   // Solution code here...
-  let arr=starWarsData.reduce(arr,starWarsData){
-    // arr.push(starWarsData.name);
+  let newArray =arr.reduce((accumlator,value)=>{
+    accumlator.push(value.name);
+    return accumlator;
+  },[])
+  return newArray;
 
-  }
-  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -158,9 +146,10 @@ Note: You must use reduce for this challenge. You may not use the built-in .reve
 
 const reversedString = (str) => {
   // Solution code here...
-  let arr=str.split('');
-  let str1=['a','b','c','d','f'];
-  return arr.reduce((arr, str) => str1+arr, "").split("");
+  let arr = str.split('');
+  return arr.reduce((accumlator,value)=>{
+    return value+accumlator
+  },'');
 };
 
 /* ------------------------------------------------------------------------------------------------
